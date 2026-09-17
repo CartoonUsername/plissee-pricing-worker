@@ -1,0 +1,13 @@
+{
+  "name": "plissee-pricing-worker",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "generate-pricing": "node scripts/generate-pricing-data.js ../plissee-konfigurator/sections/plissee-configurator.liquid"
+  },
+  "devDependencies": {
+    "wrangler": "^4.133.0"
+  }
+}

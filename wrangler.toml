@@ -1,0 +1,10 @@
+name = "plissee-pricing-worker"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# Nicht geheim — nur der Shop-Domain und erlaubte Aufruf-Herkünfte.
+# Geheime Werte (SHOPIFY_ADMIN_TOKEN) NIE hier eintragen, siehe README.md
+# ("wrangler secret put").
+[vars]
+SHOPIFY_SHOP_DOMAIN = "b8x6hc-0h.myshopify.com"
+ALLOWED_ORIGIN = "https://emscraft24.de,https://www.emscraft24.de"

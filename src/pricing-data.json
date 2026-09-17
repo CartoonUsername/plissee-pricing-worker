@@ -1,0 +1,414 @@
+{
+  "rates": {
+    "baseFee": 12.22,
+    "pricePerMeterWidth": 25.39,
+    "pricePerMeterHeight": 10.5,
+    "minPrice": 20,
+    "minWidth": 30,
+    "maxWidth": 150,
+    "minHeight": 30,
+    "maxHeight": 240
+  },
+  "items": {
+    "rail_1": {
+      "type": "rail",
+      "name": "Anthrazit",
+      "surcharge": 0
+    },
+    "rail_2": {
+      "type": "rail",
+      "name": "Weiß",
+      "surcharge": 0
+    },
+    "rail_3": {
+      "type": "rail",
+      "name": "Silber",
+      "surcharge": 0
+    },
+    "rail_4": {
+      "type": "rail",
+      "name": "Braun",
+      "surcharge": 0
+    },
+    "bracket_1": {
+      "type": "bracket",
+      "name": "Anthrazit",
+      "surcharge": 0
+    },
+    "bracket_2": {
+      "type": "bracket",
+      "name": "Weiß",
+      "surcharge": 0
+    },
+    "bracket_3": {
+      "type": "bracket",
+      "name": "Silber",
+      "surcharge": 0
+    },
+    "fabric_1": {
+      "type": "fabric",
+      "name": "10101",
+      "surcharge": 0
+    },
+    "fabric_2": {
+      "type": "fabric",
+      "name": "10102",
+      "surcharge": 0
+    },
+    "fabric_3": {
+      "type": "fabric",
+      "name": "10103",
+      "surcharge": 0
+    },
+    "fabric_4": {
+      "type": "fabric",
+      "name": "10104",
+      "surcharge": 0
+    },
+    "fabric_5": {
+      "type": "fabric",
+      "name": "10105",
+      "surcharge": 0
+    },
+    "fabric_6": {
+      "type": "fabric",
+      "name": "10106",
+      "surcharge": 0
+    },
+    "fabric_7": {
+      "type": "fabric",
+      "name": "10108",
+      "surcharge": 0
+    },
+    "fabric_8": {
+      "type": "fabric",
+      "name": "10109",
+      "surcharge": 0
+    },
+    "fabric_9": {
+      "type": "fabric",
+      "name": "10111",
+      "surcharge": 0
+    },
+    "fabric_10": {
+      "type": "fabric",
+      "name": "10112",
+      "surcharge": 0
+    },
+    "fabric_11": {
+      "type": "fabric",
+      "name": "10113",
+      "surcharge": 0
+    },
+    "fabric_12": {
+      "type": "fabric",
+      "name": "10116",
+      "surcharge": 0
+    },
+    "fabric_13": {
+      "type": "fabric",
+      "name": "10119",
+      "surcharge": 0
+    },
+    "fabric_14": {
+      "type": "fabric",
+      "name": "10123",
+      "surcharge": 0
+    },
+    "fabric_15": {
+      "type": "fabric",
+      "name": "10124",
+      "surcharge": 0
+    },
+    "fabric_16": {
+      "type": "fabric",
+      "name": "10125",
+      "surcharge": 0
+    },
+    "fabric_17": {
+      "type": "fabric",
+      "name": "10126",
+      "surcharge": 0
+    },
+    "fabric_18": {
+      "type": "fabric",
+      "name": "10129",
+      "surcharge": 0
+    },
+    "fabric_19": {
+      "type": "fabric",
+      "name": "20510",
+      "surcharge": 0
+    },
+    "fabric_20": {
+      "type": "fabric",
+      "name": "20550",
+      "surcharge": 0
+    },
+    "fabric_21": {
+      "type": "fabric",
+      "name": "20570",
+      "surcharge": 0
+    },
+    "fabric_22": {
+      "type": "fabric",
+      "name": "20580",
+      "surcharge": 0
+    },
+    "fabric_23": {
+      "type": "fabric",
+      "name": "20600",
+      "surcharge": 0
+    },
+    "fabric_24": {
+      "type": "fabric",
+      "name": "20610",
+      "surcharge": 0
+    },
+    "fabric_25": {
+      "type": "fabric",
+      "name": "20620",
+      "surcharge": 0
+    },
+    "fabric_26": {
+      "type": "fabric",
+      "name": "20630",
+      "surcharge": 0
+    },
+    "fabric_27": {
+      "type": "fabric",
+      "name": "20660",
+      "surcharge": 0
+    },
+    "fabric_28": {
+      "type": "fabric",
+      "name": "20680",
+      "surcharge": 0
+    },
+    "fabric_29": {
+      "type": "fabric",
+      "name": "20690",
+      "surcharge": 0
+    },
+    "fabric_30": {
+      "type": "fabric",
+      "name": "20703",
+      "surcharge": 0
+    },
+    "fabric_31": {
+      "type": "fabric",
+      "name": "20780",
+      "surcharge": 0
+    },
+    "fabric_32": {
+      "type": "fabric",
+      "name": "20203",
+      "surcharge": 0
+    },
+    "fabric_33": {
+      "type": "fabric",
+      "name": "20224",
+      "surcharge": 0
+    },
+    "fabric_34": {
+      "type": "fabric",
+      "name": "20225",
+      "surcharge": 0
+    },
+    "fabric_35": {
+      "type": "fabric",
+      "name": "20900",
+      "surcharge": 0
+    },
+    "fabric_36": {
+      "type": "fabric",
+      "name": "30N1",
+      "surcharge": 0
+    },
+    "fabric_37": {
+      "type": "fabric",
+      "name": "30N2",
+      "surcharge": 0
+    },
+    "fabric_38": {
+      "type": "fabric",
+      "name": "30N3",
+      "surcharge": 0
+    },
+    "fabric_39": {
+      "type": "fabric",
+      "name": "30N4",
+      "surcharge": 0
+    },
+    "fabric_40": {
+      "type": "fabric",
+      "name": "30N5",
+      "surcharge": 0
+    },
+    "fabric_41": {
+      "type": "fabric",
+      "name": "50300",
+      "surcharge": 2.38
+    },
+    "fabric_42": {
+      "type": "fabric",
+      "name": "50301",
+      "surcharge": 0
+    },
+    "fabric_43": {
+      "type": "fabric",
+      "name": "50302",
+      "surcharge": 0
+    },
+    "fabric_44": {
+      "type": "fabric",
+      "name": "50303",
+      "surcharge": 0
+    },
+    "fabric_45": {
+      "type": "fabric",
+      "name": "50304",
+      "surcharge": 0
+    },
+    "fabric_46": {
+      "type": "fabric",
+      "name": "50305",
+      "surcharge": 0
+    },
+    "fabric_47": {
+      "type": "fabric",
+      "name": "50306",
+      "surcharge": 0
+    },
+    "fabric_48": {
+      "type": "fabric",
+      "name": "50307",
+      "surcharge": 0
+    },
+    "fabric_49": {
+      "type": "fabric",
+      "name": "50308",
+      "surcharge": 0
+    },
+    "fabric_50": {
+      "type": "fabric",
+      "name": "50309",
+      "surcharge": 0
+    },
+    "fabric_51": {
+      "type": "fabric",
+      "name": "70040",
+      "surcharge": 0
+    },
+    "fabric_52": {
+      "type": "fabric",
+      "name": "70052",
+      "surcharge": 0
+    },
+    "fabric_53": {
+      "type": "fabric",
+      "name": "70056",
+      "surcharge": 0
+    },
+    "fabric_54": {
+      "type": "fabric",
+      "name": "70061",
+      "surcharge": 0
+    },
+    "fabric_55": {
+      "type": "fabric",
+      "name": "70063",
+      "surcharge": 0
+    },
+    "fabric_56": {
+      "type": "fabric",
+      "name": "70066",
+      "surcharge": 0
+    },
+    "fabric_57": {
+      "type": "fabric",
+      "name": "70067",
+      "surcharge": 0
+    },
+    "fabric_58": {
+      "type": "fabric",
+      "name": "70069",
+      "surcharge": 0
+    },
+    "fabric_59": {
+      "type": "fabric",
+      "name": "70070",
+      "surcharge": 0
+    },
+    "fabric_60": {
+      "type": "fabric",
+      "name": "70072",
+      "surcharge": 0
+    },
+    "fabric_61": {
+      "type": "fabric",
+      "name": "70073",
+      "surcharge": 0
+    },
+    "fabric_62": {
+      "type": "fabric",
+      "name": "70074",
+      "surcharge": 0
+    },
+    "fabric_63": {
+      "type": "fabric",
+      "name": "70077",
+      "surcharge": 0
+    },
+    "fabric_64": {
+      "type": "fabric",
+      "name": "40451",
+      "surcharge": 0
+    },
+    "fabric_65": {
+      "type": "fabric",
+      "name": "40452",
+      "surcharge": 0
+    },
+    "fabric_66": {
+      "type": "fabric",
+      "name": "40453",
+      "surcharge": 0
+    },
+    "fabric_67": {
+      "type": "fabric",
+      "name": "40454",
+      "surcharge": 0
+    },
+    "fabric_68": {
+      "type": "fabric",
+      "name": "40455",
+      "surcharge": 0
+    },
+    "fabric_69": {
+      "type": "fabric",
+      "name": "40456",
+      "surcharge": 0
+    },
+    "fabric_70": {
+      "type": "fabric",
+      "name": "40457",
+      "surcharge": 0
+    },
+    "fabric_71": {
+      "type": "fabric",
+      "name": "40458",
+      "surcharge": 0
+    },
+    "fabric_72": {
+      "type": "fabric",
+      "name": "40459",
+      "surcharge": 0
+    },
+    "fabric_73": {
+      "type": "fabric",
+      "name": "40612",
+      "surcharge": 48.35
+    }
+  }
+}
