@@ -122,7 +122,10 @@ async function getAccessToken(env) {
       client_secret: env.SHOPIFY_CLIENT_SECRET,
     }),
   });
-  if (!res.ok) throw new Error("Token-Anfrage an Shopify fehlgeschlagen (" + res.status + ")");
+  if (!res.ok) {
+    const bodyText = await res.text().catch(function () { return ""; });
+    throw new Error("Token-Anfrage an Shopify fehlgeschlagen (" + res.status + "): " + bodyText.slice(0, 300));
+  }
   const data = await res.json();
   if (!data.access_token) throw new Error("Shopify lieferte keinen Zugangstoken.");
   return data.access_token;
