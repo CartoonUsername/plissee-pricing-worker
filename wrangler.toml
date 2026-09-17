@@ -1,6 +1,7 @@
 name = "plissee-pricing-worker"
 main = "src/index.js"
 compatibility_date = "2025-01-01"
+workers_dev = true
 
 # Nicht geheim — nur der Shop-Domain und erlaubte Aufruf-Herkünfte.
 # Geheime Werte (SHOPIFY_ADMIN_TOKEN) NIE hier eintragen, siehe README.md
