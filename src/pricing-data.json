@@ -1,7 +1,7 @@
 {
   "rates": {
-    "baseFee": 12.22,
-    "pricePerMeterWidth": 25.39,
+    "baseFee": 12.2,
+    "pricePerMeterWidth": 25.4,
     "pricePerMeterHeight": 10.5,
     "minPrice": 20,
     "minWidth": 30,
@@ -248,7 +248,7 @@
     "fabric_41": {
       "type": "fabric",
       "name": "50300",
-      "surcharge": 2.38
+      "surcharge": 2.4
     },
     "fabric_42": {
       "type": "fabric",
@@ -408,7 +408,7 @@
     "fabric_73": {
       "type": "fabric",
       "name": "40612",
-      "surcharge": 48.35
+      "surcharge": 48.4
     }
   }
 }
