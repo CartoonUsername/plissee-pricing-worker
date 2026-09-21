@@ -78,7 +78,41 @@ Leer lassen (Standard) = normales `/cart/add` bleibt aktiv — z. B. sinnvoll,
 falls ihr später auf Shopify Plus wechselt und stattdessen eine
 Cart-Transform-Function nutzen wollt.
 
-## 4. Testen
+## 4. Einmalig installieren (Zugangstoken holen)
+
+Der Worker nutzt bevorzugt einen **dauerhaften Admin-API-Token** im Secret
+`SHOPIFY_ADMIN_TOKEN`. Den gibt es nicht per Knopfdruck im Adminbereich,
+sondern wird einmalig über die normale App-Installation (OAuth) erzeugt — der
+Worker bringt dafür die Seiten `/install` und `/callback` mit.
+
+Wichtig: Ohne diesen Token versucht der Worker den "Client Credentials
+Grant" (Schlüssel 1.4). Der funktioniert **nur**, wenn App und Shop in
+derselben Dev-Dashboard-Organisation liegen — sonst kommt von Shopify
+`application_cannot_be_found`. Der Token hier hängt nicht davon ab.
+
+1. **Dev Dashboard → App → Version → Weiterleitungs-URL** eintragen:
+   `https://plissee-pricing-worker.<dein-name>.workers.dev/callback`
+   (muss exakt stimmen), Bereich `write_draft_orders` prüfen, Version
+   **veröffentlichen**.
+2. **Dev Dashboard → App → Verteilung**: "Benutzerdefinierte Verteilung"
+   (custom distribution) wählen und den Shop `b8x6hc-0h.myshopify.com`
+   eintragen — nötig, damit die App auf einem Shop installiert werden darf,
+   der nicht zur eigenen Organisation gehört. (Achtung: diese Wahl lässt sich
+   nicht mehr rückgängig machen.)
+3. Als Shop-Admin eingeloggt im Browser öffnen:
+   `https://plissee-pricing-worker.<dein-name>.workers.dev/install`
+   → Shopify fragt nach Freigabe → **Installieren**.
+4. Die Seite danach zeigt den Token **einmalig** an. Im Worker-Ordner:
+   ```bash
+   npx wrangler secret put SHOPIFY_ADMIN_TOKEN
+   ```
+   und den Token einfügen. Ein erneutes Deployen ist nicht nötig.
+
+Sobald das Secret gesetzt ist, sind `/install` und `/callback` gesperrt
+(niemand kann von außen einen zweiten Durchlauf anstoßen). Den Token wie ein
+Passwort behandeln.
+
+## 5. Testen
 
 - Auf einer Entwurfs-Theme-Vorschau eine Konfiguration durchklicken, "In den
   Warenkorb" — sollte zu einer Shopify-Kassenseite mit korrektem,

@@ -103,16 +103,155 @@ const DRAFT_ORDER_MUTATION = `
   }
 `;
 
-/** Das neuere "Dev Dashboard"-App-Modell (Client-ID + Client-Secret) gibt
- * KEINEN dauerhaften Admin-API-Token mehr direkt im Adminbereich aus (anders
- * als die alten "Custom Apps"). Für eine App, die nur auf dem EIGENEN Shop
- * läuft, ist der "Client Credentials Grant" der richtige Weg: bei jedem
- * Aufruf einen kurzlebigen Token (24 Std. gültig) live anfordern, statt
- * einen fest gespeicherten Token zu nutzen. Da dieser Worker nur bei
- * "In den Warenkorb"-Klicks läuft (kein Hochfrequenz-Traffic), lohnt sich
- * Caching hier nicht — einfach jedes Mal frisch anfordern.
+const OAUTH_SCOPES = "write_draft_orders";
+const STATE_COOKIE = "plissee_oauth_state";
+
+function htmlPage(title, bodyHtml, status, extraHeaders) {
+  const page =
+    '<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="robots" content="noindex">' +
+    "<title>" + title + '</title><style>body{font:16px/1.5 system-ui,sans-serif;max-width:640px;margin:48px auto;padding:0 16px}' +
+    "code,pre{background:#f2f2f2;padding:2px 6px;border-radius:4px;word-break:break-all}pre{padding:12px;white-space:pre-wrap}</style></head><body>" +
+    bodyHtml + "</body></html>";
+  return new Response(page, {
+    status: status || 200,
+    headers: Object.assign(
+      { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store", "Referrer-Policy": "no-referrer" },
+      extraHeaders || {}
+    ),
+  });
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+function hexToBytes(hex) {
+  const out = new Uint8Array(hex.length / 2);
+  for (let i = 0; i < out.length; i++) out[i] = parseInt(hex.substr(i * 2, 2), 16);
+  return out;
+}
+
+/** Prüft die HMAC-Signatur, mit der Shopify den Callback-Aufruf unterschreibt
+ * (alle Query-Parameter außer "hmac", nach Namen sortiert, als "k=v&k=v",
+ * SHA-256 mit dem Client-Secret). crypto.subtle.verify vergleicht in
+ * konstanter Zeit. */
+async function verifyShopifyHmac(url, secret) {
+  const params = new URLSearchParams(url.search);
+  const hmac = params.get("hmac");
+  if (!hmac || !/^[0-9a-f]{64}$/i.test(hmac)) return false;
+  params.delete("hmac");
+  const message = Array.from(params.entries())
+    .sort((a, b) => (a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0))
+    .map(([k, v]) => k + "=" + v)
+    .join("&");
+  const key = await crypto.subtle.importKey("raw", new TextEncoder().encode(secret), { name: "HMAC", hash: "SHA-256" }, false, ["verify"]);
+  return crypto.subtle.verify("HMAC", key, hexToBytes(hmac), new TextEncoder().encode(message));
+}
+
+function readCookie(request, name) {
+  const header = request.headers.get("Cookie") || "";
+  for (const part of header.split(";")) {
+    const [k, ...rest] = part.trim().split("=");
+    if (k === name) return rest.join("=");
+  }
+  return "";
+}
+
+function alreadyInstalledPage() {
+  return htmlPage("Bereits eingerichtet", "<h1>Bereits eingerichtet</h1><p>Für diesen Worker ist bereits ein Shopify-Zugangstoken hinterlegt (<code>SHOPIFY_ADMIN_TOKEN</code>). Die Installationsseiten sind deshalb deaktiviert.</p>", 403);
+}
+
+/** Schritt 1 der EINMALIGEN Installation (Authorization Code Grant): leitet
+ * den Shop-Admin zur Shopify-Freigabeseite. Nur nötig, wenn noch kein
+ * SHOPIFY_ADMIN_TOKEN gesetzt ist — danach ist die Route gesperrt, damit
+ * niemand von außen einen zweiten Durchlauf anstoßen kann. */
+function handleInstall(request, env) {
+  if (env.SHOPIFY_ADMIN_TOKEN) return alreadyInstalledPage();
+  const state = crypto.randomUUID();
+  const authUrl = new URL("https://" + env.SHOPIFY_SHOP_DOMAIN + "/admin/oauth/authorize");
+  authUrl.search = new URLSearchParams({
+    client_id: env.SHOPIFY_CLIENT_ID,
+    scope: OAUTH_SCOPES,
+    redirect_uri: new URL(request.url).origin + "/callback",
+    state,
+  }).toString();
+  return new Response(null, {
+    status: 302,
+    headers: {
+      Location: authUrl.toString(),
+      "Set-Cookie": STATE_COOKIE + "=" + state + "; HttpOnly; Secure; SameSite=Lax; Path=/callback; Max-Age=600",
+      "Cache-Control": "no-store",
+    },
+  });
+}
+
+/** Schritt 2: Shopify ruft diese URL nach der Freigabe auf. Prüft state
+ * (CSRF), Shop und HMAC, tauscht den Code gegen den dauerhaften Zugangstoken
+ * und zeigt ihn EINMAL an — ein Worker kann seine eigenen Secrets nicht
+ * setzen, deshalb wird der Token per "wrangler secret put" hinterlegt. */
+async function handleCallback(request, env) {
+  if (env.SHOPIFY_ADMIN_TOKEN) return alreadyInstalledPage();
+  const url = new URL(request.url);
+  const q = url.searchParams;
+  const clearState = { "Set-Cookie": STATE_COOKIE + "=; HttpOnly; Secure; SameSite=Lax; Path=/callback; Max-Age=0" };
+
+  const cookieState = readCookie(request, STATE_COOKIE);
+  if (!cookieState || q.get("state") !== cookieState) {
+    return htmlPage("Ungültige Anfrage", "<h1>Ungültige Anfrage</h1><p>Der Sicherheitswert (state) stimmt nicht. Bitte die Installation erneut über <code>/install</code> starten.</p>", 403, clearState);
+  }
+  if (q.get("shop") !== env.SHOPIFY_SHOP_DOMAIN) {
+    return htmlPage("Ungültige Anfrage", "<h1>Ungültige Anfrage</h1><p>Falscher Shop.</p>", 403, clearState);
+  }
+  if (!(await verifyShopifyHmac(url, env.SHOPIFY_CLIENT_SECRET))) {
+    return htmlPage("Ungültige Anfrage", "<h1>Ungültige Anfrage</h1><p>Die Signatur (hmac) ist ungültig.</p>", 403, clearState);
+  }
+  const timestamp = Number(q.get("timestamp"));
+  if (!Number.isFinite(timestamp) || Math.abs(Date.now() / 1000 - timestamp) > 300) {
+    return htmlPage("Abgelaufen", "<h1>Abgelaufen</h1><p>Die Anfrage ist zu alt. Bitte <code>/install</code> erneut aufrufen.</p>", 403, clearState);
+  }
+  const code = q.get("code");
+  if (!code) return htmlPage("Ungültige Anfrage", "<h1>Ungültige Anfrage</h1><p>Kein Code übergeben.</p>", 400, clearState);
+
+  const res = await fetch("https://" + env.SHOPIFY_SHOP_DOMAIN + "/admin/oauth/access_token", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({ client_id: env.SHOPIFY_CLIENT_ID, client_secret: env.SHOPIFY_CLIENT_SECRET, code }),
+  });
+  if (!res.ok) {
+    const bodyText = await res.text().catch(function () { return ""; });
+    return htmlPage("Fehler", "<h1>Token-Austausch fehlgeschlagen</h1><p>Shopify antwortete mit " + res.status + ":</p><pre>" + escapeHtml(bodyText.slice(0, 300)) + "</pre>", 502, clearState);
+  }
+  const data = await res.json();
+  if (!data.access_token) {
+    return htmlPage("Fehler", "<h1>Shopify lieferte keinen Zugangstoken.</h1>", 502, clearState);
+  }
+
+  const notes = [];
+  if (!String(data.scope || "").split(",").includes(OAUTH_SCOPES)) {
+    notes.push("<p><strong>Achtung:</strong> Der Token hat nicht den Bereich <code>" + OAUTH_SCOPES + "</code> (erhalten: <code>" + escapeHtml(data.scope || "–") + "</code>). Bereich in der App-Version ergänzen und neu installieren.</p>");
+  }
+  if (data.expires_in || data.refresh_token) {
+    notes.push("<p><strong>Achtung:</strong> Shopify hat einen ABLAUFENDEN Token ausgestellt (läuft nach " + escapeHtml(data.expires_in) + " s ab). Dieser Worker ist für dauerhafte Tokens gebaut — bitte melden, dann wird eine Auffrischung ergänzt.</p>");
+  }
+  return htmlPage(
+    "Installation abgeschlossen",
+    "<h1>Installation abgeschlossen</h1><p>Dieser Zugangstoken wird nur jetzt angezeigt. Im Terminal im Worker-Ordner ausführen und den Token einfügen:</p>" +
+      "<pre>npx wrangler secret put SHOPIFY_ADMIN_TOKEN</pre><p>Token:</p><pre>" + escapeHtml(data.access_token) + "</pre>" +
+      notes.join("") + "<p>Danach diese Seite schließen. Der Token ist wie ein Passwort zu behandeln.</p>",
+    200,
+    clearState
+  );
+}
+
+/** Bevorzugt den einmalig per /install erzeugten, dauerhaften Admin-API-Token
+ * (Secret SHOPIFY_ADMIN_TOKEN) — er hängt NICHT davon ab, ob App und Shop in
+ * derselben Dev-Dashboard-Organisation liegen. Nur wenn der noch fehlt, wird
+ * der "Client Credentials Grant" versucht: der funktioniert ausschließlich,
+ * wenn App und Shop zur selben Organisation gehören, sonst antwortet Shopify
+ * mit "application_cannot_be_found".
  * https://shopify.dev/docs/apps/build/dev-dashboard/get-api-access-tokens */
 async function getAccessToken(env) {
+  if (env.SHOPIFY_ADMIN_TOKEN) return env.SHOPIFY_ADMIN_TOKEN;
   const res = await fetch("https://" + env.SHOPIFY_SHOP_DOMAIN + "/admin/oauth/access_token", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -155,6 +294,10 @@ export default {
   async fetch(request, env) {
     const origin = request.headers.get("Origin") || "";
     const corsHeaders = cors(origin, env);
+
+    const pathname = new URL(request.url).pathname;
+    if (request.method === "GET" && pathname === "/install") return handleInstall(request, env);
+    if (request.method === "GET" && pathname === "/callback") return handleCallback(request, env);
 
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: corsHeaders });
     if (request.method !== "POST") return json({ error: "Nur POST erlaubt." }, 405, corsHeaders);
