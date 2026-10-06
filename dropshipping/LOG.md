@@ -8,3 +8,4 @@
 - 2026-10-06 Produkt 2 gewählt, Phase 2 erstellt (Annahmen, Break-even-ROAS 1,8-3,3). Wartet auf Freigabe nächster Schritte.
 - 2026-10-06 Decke verworfen. Neue Richtung A (Haustier-Personalisierung) + B (Sternenkarte) auf einem Shop. Phase 2b erstellt (BE-ROAS real. 1,65 / 1,52). Wartet auf Freigabe.
 - 2026-10-06 CONTENT_scripts.md (Hooks+Skripte A/B) und SAMPLE_PLAN.md erstellt. Nichts bestellt, nichts generiert.
+- 2026-10-06 SUPPLIERS.md erstellt (Gelato/Printful/Printify, keine Preise verifiziert). Sample-Vorschlag max 50 EUR, Bestellung durch Nutzer selbst.
