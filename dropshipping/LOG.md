@@ -9,3 +9,4 @@
 - 2026-10-06 Decke verworfen. Neue Richtung A (Haustier-Personalisierung) + B (Sternenkarte) auf einem Shop. Phase 2b erstellt (BE-ROAS real. 1,65 / 1,52). Wartet auf Freigabe.
 - 2026-10-06 CONTENT_scripts.md (Hooks+Skripte A/B) und SAMPLE_PLAN.md erstellt. Nichts bestellt, nichts generiert.
 - 2026-10-06 SUPPLIERS.md erstellt (Gelato/Printful/Printify, keine Preise verifiziert). Sample-Vorschlag max 50 EUR, Bestellung durch Nutzer selbst.
+- 2026-10-06 Automatisierungs-Modell in PROJECT.md festgehalten (Auto-Fulfillment via POD-App, Freigabe einmalig).

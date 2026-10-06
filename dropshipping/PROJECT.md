@@ -33,3 +33,11 @@ Shopify-Shop in einer Nische aufbauen, organisch über TikTok starten, erste ech
 
 ## Entscheidungen
 - 2026-10-06 Produktwahl: Nr. 2 Hoodie-Kuscheldecke (Zielpreis 39 EUR). Phase 2 siehe PHASE2_unit_economics.md.
+
+## Automatisierungs-Modell (Stand 2026-10-06)
+Ziel: Aufbau bis erste Bestellung weitgehend automatisch, Bestellweiterleitung an den Produzenten ohne manuelles Versenden.
+- Bestellweiterleitung: **POD-App im Shopify** (Gelato oder Printful) leitet bezahlte Bestellungen automatisch an die Produktion und schickt Tracking zurück. Einmalige Einrichtung + einmalige Freigabe durch den Nutzer, danach läuft es ohne Einzel-Freigabe.
+- Von mir automatisierbar: Shop-Aufbau im Entwurfsmodus, Produkt-/Pflichtseiten-Entwürfe, Konfigurator, E-Mail-Flows, Tracking-Setup, Content (Skripte, Higgsfield mit Kostenfreigabe), Wochenberichte.
+- Nur der Nutzer kann: Konten anlegen/Bezahlmethoden hinterlegen (Anbieter, Shopify Payments/KYC), rechtliche Texte final prüfen lassen, "Go live", Ads-Budget freigeben.
+- Dauerfreigabe-Vorschlag: Auto-Fulfillment innerhalb des Budgets (500 EUR gesamt) nach Go live; Posts und Ads weiterhin pro Freigabe.
+- Blocker: Shopify-Connector in dieser Sitzung nicht authentifiziert; TikTok-Creator nicht verbunden; kein TikTok-Werbekonto.
