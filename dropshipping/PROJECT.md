@@ -41,3 +41,10 @@ Ziel: Aufbau bis erste Bestellung weitgehend automatisch, Bestellweiterleitung a
 - Nur der Nutzer kann: Konten anlegen/Bezahlmethoden hinterlegen (Anbieter, Shopify Payments/KYC), rechtliche Texte final prüfen lassen, "Go live", Ads-Budget freigeben.
 - Dauerfreigabe-Vorschlag: Auto-Fulfillment innerhalb des Budgets (500 EUR gesamt) nach Go live; Posts und Ads weiterhin pro Freigabe.
 - Blocker: Shopify-Connector in dieser Sitzung nicht authentifiziert; TikTok-Creator nicht verbunden; kein TikTok-Werbekonto.
+
+## Dauerfreigabe (vom Nutzer erteilt am 2026-10-06)
+"Dauerfreigabe Auto-Fulfillment nach Go live":
+- Gilt NUR für die automatische Weiterleitung bezahlter Kundenbestellungen an den POD-Produzenten (Gelato/Printful-App) NACH ausdrücklichem "Go live" des Nutzers.
+- Rahmen: Gesamtbudget 500 EUR; Produktionskosten bezahlter Bestellungen werden aus Kundenzahlungen gedeckt.
+- Gilt NICHT für: Go live selbst, TikTok-Posts, Ads/Werbebudget, Nachrichten an Lieferanten/Kunden, Zahlungs-/Steuereinstellungen. Dafür weiter Freigabe pro Fall.
+- Vor Go live: nicht aktiv.

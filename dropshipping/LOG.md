@@ -10,3 +10,4 @@
 - 2026-10-06 CONTENT_scripts.md (Hooks+Skripte A/B) und SAMPLE_PLAN.md erstellt. Nichts bestellt, nichts generiert.
 - 2026-10-06 SUPPLIERS.md erstellt (Gelato/Printful/Printify, keine Preise verifiziert). Sample-Vorschlag max 50 EUR, Bestellung durch Nutzer selbst.
 - 2026-10-06 Automatisierungs-Modell in PROJECT.md festgehalten (Auto-Fulfillment via POD-App, Freigabe einmalig).
+- 2026-10-06 Nutzer erteilt Dauerfreigabe Auto-Fulfillment nach Go live (Umfang in PROJECT.md). Noch nicht aktiv.
