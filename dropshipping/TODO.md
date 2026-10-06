@@ -3,7 +3,7 @@
 ## Phase 0: Setup
 - [x] Verbindungen prüfen
 - [x] Projektdateien anlegen
-- [ ] 8 Klärungsfragen beantwortet
+- [ ] Klärungsfragen: 1-3 beantwortet; offen: 4-8
 - [ ] TikTok-Account verbinden (Connector-Login)
 - [ ] Shopify-Zugang einrichten (Dev-Store / Custom App, minimale Scopes, nur in `.env`)
 

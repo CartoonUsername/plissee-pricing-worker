@@ -15,12 +15,12 @@ Shopify-Shop in einer Nische aufbauen, organisch über TikTok starten, erste ech
 7. Ehrliche, konservative Zahlen.
 
 ## Limits (vom Nutzer festzulegen)
-- Gesamtbudget Tests: _offen_
-- Tägliches Werbelimit: _offen_
+- Gesamtbudget Tests: 500 EUR
+- Tägliches Werbelimit: 20 EUR
 - Zeit pro Woche: _offen_
 
 ## Rahmenbedingungen (offen)
-- Gewerbe / Rechtsform / Steuerstatus: _offen_
+- Gewerbe: vorhanden, Kleinunternehmer (§19 UStG: keine MwSt. ausweisen, Hinweis im Shop nötig; Umsatzgrenze beachten)
 - Markt (DE / DACH): _offen_
 - Tabus: _offen_
 
