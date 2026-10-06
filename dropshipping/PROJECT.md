@@ -32,4 +32,4 @@ Shopify-Shop in einer Nische aufbauen, organisch über TikTok starten, erste ech
 | Shopify | **kein Connector/Tool verfügbar** (Alternative: Admin API mit minimalen Scopes via `.env` oder Shopify CLI) |
 
 ## Entscheidungen
-_noch keine_
+- 2026-10-06 Produktwahl: Nr. 2 Hoodie-Kuscheldecke (Zielpreis 39 EUR). Phase 2 siehe PHASE2_unit_economics.md.

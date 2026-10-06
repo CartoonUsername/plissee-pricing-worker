@@ -1,0 +1,4 @@
+Szenario,Verkaufspreis_EUR,MwSt_EUR,EK_plus_Versand_EUR,Zahlungsgebuehr_EUR,Retourenquote_pct,Deckungsbeitrag_vor_Ads_EUR,DB_Marge_pct,BreakEven_ROAS,Max_CPA_EUR,Annahme_CPC_EUR,Noetige_Conversion_Rate_pct
+pessimistisch,39.0,0.0,20.0,1.48,15.0,11.67,29.9,3.34,11.67,0.8,6.86
+realistisch,39.0,0.0,16.0,1.48,8.0,18.4,47.2,2.12,18.4,0.6,3.26
+optimistisch,39.0,0.0,14.0,1.48,5.0,21.57,55.3,1.81,21.57,0.4,1.85
