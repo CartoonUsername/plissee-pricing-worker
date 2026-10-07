@@ -15,7 +15,8 @@
 - [ ] Freigabe: Samples A+B bestellen / organische Nachfrage-Validierung
 ## Phase 3: Shopify-Aufbau
 - [x] Plan + rechtliche Entwürfe als Dateien (PHASE3_shop_plan.md, legal/)
-- [ ] Markenname wählen
+- [x] Markenname: Mellivo, Domain mellivo.de registriert
+- [ ] Marken-Recherche DPMA/EUIPO + Social-Handles (Nutzer)
 - [ ] Shopify-Store + Connector in Sitzung
 - [ ] Shop im Entwurf bauen, Pixel, Konfigurator
 ## Phase 4: Content mit Higgsfield

@@ -5,7 +5,7 @@ Status 2026-10-07: TikTok-Werbekonto verbunden (advertiser_id 769381555823996108
 ## 1. Marke (Arbeitstitel)
 **"Mellivo"**: frei erfundenes, warm klingendes Wort ohne Produktbezug (Linien: "Mellivo Pets" = A, "Mellivo Sterne" = B nur mit Haustier-Bezug).
 - Verworfen: Pfotenpost (pfotenpost.ch existiert), Tavilo (tavilo.de belegt, "coming soon"), Eigenart, Sternenpfote, Kuvira, Nuvea, Miravo, Lunaro.
-- `mellivo.de` liefert im Browser NXDOMAIN (keine DNS-Einträge). Das deutet auf unregistriert, **beweist es aber nicht** (registriert ohne Server möglich). Vor Kauf: Domain-Anbieter-Abfrage, DPMA/EUIPO-Markenrecherche (Klassen 16, 18, 20, 21, 35), Social-Handle `mellivo` auf TikTok/Instagram.
+- `mellivo.de` wurde vom Nutzer am 2026-10-07 **selbst registriert**. Zuvor lieferte sie im Browser NXDOMAIN (keine DNS-Einträge). Das deutet auf unregistriert, **beweist es aber nicht** (registriert ohne Server möglich). Vor Kauf: Domain-Anbieter-Abfrage, DPMA/EUIPO-Markenrecherche (Klassen 16, 18, 20, 21, 35), Social-Handle `mellivo` auf TikTok/Instagram.
 - Alternativen: "Tavrio", "Orvina".
 Palette: Creme #FAF7F2, Tiefblau #1E2A47, Akzent Terrakotta #D9774A. Schrift: Serif (Überschriften) + Sans (Text).
 

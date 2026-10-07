@@ -50,5 +50,5 @@ Ziel: Aufbau bis erste Bestellung weitgehend automatisch, Bestellweiterleitung a
 - Vor Go live: nicht aktiv.
 
 ## Entscheidungen (Ergänzung 2026-10-07)
-- Markenname (Arbeitstitel): "Mellivo" (Mellivo Pets / Mellivo Sterne). Verworfen: Pfotenpost, Tavilo (Domain belegt). mellivo.de NXDOMAIN, Registrar/Marke noch ungeprüft.
+- Markenname (Arbeitstitel): "Mellivo" (Mellivo Pets / Mellivo Sterne). Verworfen: Pfotenpost, Tavilo (Domain belegt). mellivo.de vom Nutzer selbst registriert (2026-10-07). Offen: DPMA/EUIPO-Markenrecherche, Social-Handles.
 - B (Sternenkarten) hat etablierte Wettbewerber, nur mit Haustier-Differenzierung weiterführen; A hat Priorität.

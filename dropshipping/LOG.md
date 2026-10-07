@@ -16,3 +16,4 @@
 - 2026-10-07 Name gewählt: Pfotenpost / Sternenpost (ungeprüft). Wettbewerb bei Sternenkarten festgestellt, B nur mit Differenzierung.
 - 2026-10-07 Name geändert: Pfotenpost verworfen (pfotenpost.ch existiert), neu Arbeitstitel 'Tavilo' (ungeprüft: Domain/DPMA/EUIPO).
 - 2026-10-07 Name: Tavilo verworfen (tavilo.de belegt), neu Arbeitstitel 'Mellivo' (mellivo.de NXDOMAIN, Registrar/Marke ungeprüft).
+- 2026-10-07 Nutzer hat mellivo.de selbst registriert. Offen: Markenrecherche, Handles, Shopify-Store/Connector.
