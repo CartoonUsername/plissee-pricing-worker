@@ -40,7 +40,7 @@ Ziel: Aufbau bis erste Bestellung weitgehend automatisch, Bestellweiterleitung a
 - Von mir automatisierbar: Shop-Aufbau im Entwurfsmodus, Produkt-/Pflichtseiten-Entwürfe, Konfigurator, E-Mail-Flows, Tracking-Setup, Content (Skripte, Higgsfield mit Kostenfreigabe), Wochenberichte.
 - Nur der Nutzer kann: Konten anlegen/Bezahlmethoden hinterlegen (Anbieter, Shopify Payments/KYC), rechtliche Texte final prüfen lassen, "Go live", Ads-Budget freigeben.
 - Dauerfreigabe-Vorschlag: Auto-Fulfillment innerhalb des Budgets (500 EUR gesamt) nach Go live; Posts und Ads weiterhin pro Freigabe.
-- Blocker: Shopify-Connector in dieser Sitzung nicht authentifiziert; TikTok-Creator nicht verbunden; kein TikTok-Werbekonto.
+- Blocker: Shopify-Connector in dieser Sitzung nicht authentifiziert; kein TikTok-Werbekonto. (TikTok-Creator seit 2026-10-07 verbunden.)
 
 ## Dauerfreigabe (vom Nutzer erteilt am 2026-10-06)
 "Dauerfreigabe Auto-Fulfillment nach Go live":

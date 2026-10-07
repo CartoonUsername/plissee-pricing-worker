@@ -4,7 +4,7 @@
 - [x] Verbindungen prüfen
 - [x] Projektdateien anlegen
 - [x] Klärungsfragen beantwortet
-- [ ] TikTok-Account verbinden (Connector-Login)
+- [x] TikTok-Account verbunden (2026-10-07)
 - [ ] Shopify-Zugang einrichten (Dev-Store / Custom App, minimale Scopes, nur in `.env`)
 
 ## Phase 1: Nischen-/Produktrecherche
