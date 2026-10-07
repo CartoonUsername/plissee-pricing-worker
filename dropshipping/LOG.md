@@ -14,3 +14,4 @@
 - 2026-10-07 TikTok-Creator-Account verbunden (active). TikTok-Business: weiterhin kein Werbekonto. Shopify in dieser Sitzung weiter nicht authentifiziert.
 - 2026-10-07 Connector TikTok-Business funktioniert (Werbekonto 7693815558239961089, kein Pixel). Shopify weiter nicht auth. PHASE3_shop_plan.md + legal/ Entwürfe erstellt (nichts live/angelegt).
 - 2026-10-07 Name gewählt: Pfotenpost / Sternenpost (ungeprüft). Wettbewerb bei Sternenkarten festgestellt, B nur mit Differenzierung.
+- 2026-10-07 Name geändert: Pfotenpost verworfen (pfotenpost.ch existiert), neu Arbeitstitel 'Tavilo' (ungeprüft: Domain/DPMA/EUIPO).

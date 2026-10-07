@@ -2,10 +2,12 @@
 
 Status 2026-10-07: TikTok-Werbekonto verbunden (advertiser_id 7693815558239961089, noch kein Pixel). Shopify-Connector in der Sitzung noch **nicht authentifiziert** -> Shop-Anlage/Produkte/Theme folgen, sobald `get-shop-info` funktioniert. Bis dahin: alles unten als Datei vorbereitet.
 
-## 1. Marke (Arbeitstitel, Entscheidung vom Assistenten, Nutzer darf ändern)
-**"Pfotenpost"**, Kollektionen: **"Pfotenpost – Für dein Tier"** (A) und **"Sternenpost"** (B, Sternenkarten, mit Haustier-Bezug, z. B. Sternenkarte zum Adoptionstag).
-Begründung: "Post" = persönliche Geschenkpost, passt zu beiden Linien, leicht zu merken/aussprechen. Gemieden: "Eigenart" (mehrere bestehende Geschäfte), "Sternenpfote" (wird oft für verstorbene Tiere genutzt, falscher Ton).
-**Nicht geprüft** (Domain-Abfrage und Shopify-Tool waren in dieser Sitzung nicht erreichbar; Websuche fand keinen Shop mit genau diesem Namen, das ist keine Markenfreigabe): vor Kauf Domain (z. B. pfotenpost.de/.shop) und Marke (DPMA, EUIPO) prüfen; bei Konflikt Alternativen aus {Pfotenpost -> "Pfoten & Post", "Lieblingspost"}.
+## 1. Marke (Arbeitstitel, vom Assistenten gewählt, Nutzer darf ändern)
+**"Tavilo"**: frei erfundenes, kurzes, gut sprechbares Wort ohne Produktbezug, damit wir Haustier-, Poster- und weitere Linien unter einer Marke führen können.
+- "Pfotenpost" verworfen (Domain pfotenpost.ch existiert). "Eigenart", "Sternenpfote" verworfen (bestehende Geschäfte bzw. falscher Ton). Ebenfalls verworfen: "Kuvira" (Figur aus einer Serie), "Nuvea" (zu nah an Nivea), "Miravo" (zu nah an Miravia), "Lunaro" (bestehende Sportart/Begriff).
+- **Nicht geprüft/nicht freigegeben:** Die Websuche fand keinen Shop namens "Tavilo" in Deutschland; Domain-Abfrage war in dieser Sitzung nicht möglich. **Vor Kauf prüfen:** tavilo.de / tavilo.shop (Domain-Anbieter), DPMA- und EUIPO-Markenrecherche (Klassen 16, 18, 20, 21, 35), Social-Handle `tavilo` auf TikTok/Instagram.
+- Linien: "Tavilo Pets" (A, Haustier-Personalisierung) und "Tavilo Sterne" (B, nur mit Haustier-Bezug).
+- Alternativen falls belegt: "Tavrio", "Mellivo", "Orvina".
 Palette: Creme #FAF7F2, Tiefblau #1E2A47, Akzent Terrakotta #D9774A. Schrift: Serif (Überschriften) + Sans (Text).
 
 ## 2. Struktur
