@@ -14,6 +14,10 @@
 - [x] Decke verworfen (nicht rentabel); neu: A Haustier-Personalisierung + B Sternenkarte auf einem Shop (PHASE2b)
 - [ ] Freigabe: Samples A+B bestellen / organische Nachfrage-Validierung
 ## Phase 3: Shopify-Aufbau
+- [x] Plan + rechtliche Entwürfe als Dateien (PHASE3_shop_plan.md, legal/)
+- [ ] Markenname wählen
+- [ ] Shopify-Store + Connector in Sitzung
+- [ ] Shop im Entwurf bauen, Pixel, Konfigurator
 ## Phase 4: Content mit Higgsfield
 ## Phase 5: TikTok organisch, dann Ads
 ## Phase 6: Betrieb und Optimierung

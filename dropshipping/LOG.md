@@ -12,3 +12,4 @@
 - 2026-10-06 Automatisierungs-Modell in PROJECT.md festgehalten (Auto-Fulfillment via POD-App, Freigabe einmalig).
 - 2026-10-06 Nutzer erteilt Dauerfreigabe Auto-Fulfillment nach Go live (Umfang in PROJECT.md). Noch nicht aktiv.
 - 2026-10-07 TikTok-Creator-Account verbunden (active). TikTok-Business: weiterhin kein Werbekonto. Shopify in dieser Sitzung weiter nicht authentifiziert.
+- 2026-10-07 Connector TikTok-Business funktioniert (Werbekonto 7693815558239961089, kein Pixel). Shopify weiter nicht auth. PHASE3_shop_plan.md + legal/ Entwürfe erstellt (nichts live/angelegt).
