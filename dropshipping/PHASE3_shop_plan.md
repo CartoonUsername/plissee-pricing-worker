@@ -2,12 +2,11 @@
 
 Status 2026-10-07: TikTok-Werbekonto verbunden (advertiser_id 7693815558239961089, noch kein Pixel). Shopify-Connector in der Sitzung noch **nicht authentifiziert** -> Shop-Anlage/Produkte/Theme folgen, sobald `get-shop-info` funktioniert. Bis dahin: alles unten als Datei vorbereitet.
 
-## 1. Marke (Arbeitstitel, vom Assistenten gewählt, Nutzer darf ändern)
-**"Tavilo"**: frei erfundenes, kurzes, gut sprechbares Wort ohne Produktbezug, damit wir Haustier-, Poster- und weitere Linien unter einer Marke führen können.
-- "Pfotenpost" verworfen (Domain pfotenpost.ch existiert). "Eigenart", "Sternenpfote" verworfen (bestehende Geschäfte bzw. falscher Ton). Ebenfalls verworfen: "Kuvira" (Figur aus einer Serie), "Nuvea" (zu nah an Nivea), "Miravo" (zu nah an Miravia), "Lunaro" (bestehende Sportart/Begriff).
-- **Nicht geprüft/nicht freigegeben:** Die Websuche fand keinen Shop namens "Tavilo" in Deutschland; Domain-Abfrage war in dieser Sitzung nicht möglich. **Vor Kauf prüfen:** tavilo.de / tavilo.shop (Domain-Anbieter), DPMA- und EUIPO-Markenrecherche (Klassen 16, 18, 20, 21, 35), Social-Handle `tavilo` auf TikTok/Instagram.
-- Linien: "Tavilo Pets" (A, Haustier-Personalisierung) und "Tavilo Sterne" (B, nur mit Haustier-Bezug).
-- Alternativen falls belegt: "Tavrio", "Mellivo", "Orvina".
+## 1. Marke (Arbeitstitel)
+**"Mellivo"**: frei erfundenes, warm klingendes Wort ohne Produktbezug (Linien: "Mellivo Pets" = A, "Mellivo Sterne" = B nur mit Haustier-Bezug).
+- Verworfen: Pfotenpost (pfotenpost.ch existiert), Tavilo (tavilo.de belegt, "coming soon"), Eigenart, Sternenpfote, Kuvira, Nuvea, Miravo, Lunaro.
+- `mellivo.de` liefert im Browser NXDOMAIN (keine DNS-Einträge). Das deutet auf unregistriert, **beweist es aber nicht** (registriert ohne Server möglich). Vor Kauf: Domain-Anbieter-Abfrage, DPMA/EUIPO-Markenrecherche (Klassen 16, 18, 20, 21, 35), Social-Handle `mellivo` auf TikTok/Instagram.
+- Alternativen: "Tavrio", "Orvina".
 Palette: Creme #FAF7F2, Tiefblau #1E2A47, Akzent Terrakotta #D9774A. Schrift: Serif (Überschriften) + Sans (Text).
 
 ## 2. Struktur
