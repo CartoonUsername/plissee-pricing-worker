@@ -42,3 +42,6 @@ Mit 500 EUR Gesamtbudget (~25 Tage à 20 EUR) ist nur ein kleiner Test möglich;
 
 ## Entscheidung (offen)
 Du wählst das Produkt (1-5, oder anderes). Nicht weitermachen ohne deine Wahl.
+
+## Nachtrag 2026-10-07: Wettbewerb Sternenkarten (B)
+Websuche zeigt etablierte Anbieter für personalisierte Sternenkarten in DE (z. B. TheStars, Night Sky Moment, MrStarsky, Momenterie, My Voice Poster). B ist also **nicht** konkurrenzfrei. Differenzierung nötig: Haustier-Bezug (Adoptions-/Geburtstag), eigene Optik, Bundles. Sonst B zurückstellen und A priorisieren.

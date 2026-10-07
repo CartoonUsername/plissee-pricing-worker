@@ -48,3 +48,7 @@ Ziel: Aufbau bis erste Bestellung weitgehend automatisch, Bestellweiterleitung a
 - Rahmen: Gesamtbudget 500 EUR; Produktionskosten bezahlter Bestellungen werden aus Kundenzahlungen gedeckt.
 - Gilt NICHT für: Go live selbst, TikTok-Posts, Ads/Werbebudget, Nachrichten an Lieferanten/Kunden, Zahlungs-/Steuereinstellungen. Dafür weiter Freigabe pro Fall.
 - Vor Go live: nicht aktiv.
+
+## Entscheidungen (Ergänzung 2026-10-07)
+- Markenname (Arbeitstitel): "Pfotenpost" (Sternenkarten-Linie: "Sternenpost"). Domain/Marke noch ungeprüft.
+- B (Sternenkarten) hat etablierte Wettbewerber, nur mit Haustier-Differenzierung weiterführen; A hat Priorität.

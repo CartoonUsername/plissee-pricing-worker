@@ -2,11 +2,11 @@
 
 Status 2026-10-07: TikTok-Werbekonto verbunden (advertiser_id 7693815558239961089, noch kein Pixel). Shopify-Connector in der Sitzung noch **nicht authentifiziert** -> Shop-Anlage/Produkte/Theme folgen, sobald `get-shop-info` funktioniert. Bis dahin: alles unten als Datei vorbereitet.
 
-## 1. Marke (Entscheidung offen)
-Zielgruppe: Haustierbesitzer + Geschenkkäufer in DE; Stil: warm, modern, hell, mobil zuerst.
-Namensideen (Verfügbarkeit von Marke/Domain **nicht geprüft**, vor Nutzung Markenregister DPMA/EUIPO + Domain prüfen): "Pfotenpost", "Sternenlicht & Pfote", "Einzigstück".
-Palette-Vorschlag: Creme #FAF7F2, Tiefblau #1E2A47, Akzent Terrakotta #D9774A. Schrift: eine Serif für Überschriften, eine Sans für Text.
--> Bitte Name wählen oder eigenen nennen.
+## 1. Marke (Arbeitstitel, Entscheidung vom Assistenten, Nutzer darf ändern)
+**"Pfotenpost"**, Kollektionen: **"Pfotenpost – Für dein Tier"** (A) und **"Sternenpost"** (B, Sternenkarten, mit Haustier-Bezug, z. B. Sternenkarte zum Adoptionstag).
+Begründung: "Post" = persönliche Geschenkpost, passt zu beiden Linien, leicht zu merken/aussprechen. Gemieden: "Eigenart" (mehrere bestehende Geschäfte), "Sternenpfote" (wird oft für verstorbene Tiere genutzt, falscher Ton).
+**Nicht geprüft** (Domain-Abfrage und Shopify-Tool waren in dieser Sitzung nicht erreichbar; Websuche fand keinen Shop mit genau diesem Namen, das ist keine Markenfreigabe): vor Kauf Domain (z. B. pfotenpost.de/.shop) und Marke (DPMA, EUIPO) prüfen; bei Konflikt Alternativen aus {Pfotenpost -> "Pfoten & Post", "Lieblingspost"}.
+Palette: Creme #FAF7F2, Tiefblau #1E2A47, Akzent Terrakotta #D9774A. Schrift: Serif (Überschriften) + Sans (Text).
 
 ## 2. Struktur
 - Ein Shop, zwei Kollektionen: "Für dein Tier" (A), "Sternenkarten" (B). Startseite: Hero, beide Kollektionen, so funktioniert's (3 Schritte), echte FAQ.
